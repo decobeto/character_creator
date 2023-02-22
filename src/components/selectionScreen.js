@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import styled from 'styled-components'
 
 const Container = styled.div`
@@ -17,9 +17,23 @@ const Container = styled.div`
 
 export default function SelectionScreen() {
   const myCanvas = useRef()
+
+  useEffect(() => {
+    const context = myCanvas.current.getContext('2d')
+
+    context.beginPath()
+    context.moveTo(100, 100)
+    context.lineTo(100, 300)
+    context.lineTo(300, 300)
+    context.closePath()
+
+    context.fillStyle = '#fdcb6e'
+    context.fill()
+  }, [])
+
   return (
     <Container>
-      <canvas ref={myCanvas} width={400} height={400} />
+      <canvas ref={myCanvas} width={500} height={500} />
     </Container>
   )
 }
