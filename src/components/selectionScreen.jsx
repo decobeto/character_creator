@@ -5,14 +5,14 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 80%;
-  height: 90%;
+  width: 99%;
+  height: 99%;
   background: rgba(255, 255, 255, 0.32);
-  border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(2.4px);
   -webkit-backdrop-filter: blur(2.4px);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
 `
 
 export default function SelectionScreen() {
